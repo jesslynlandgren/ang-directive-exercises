@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Angular Directives</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Ubuntu|Work+Sans:200,400" rel="stylesheet">
+    <!-- Angular -->
+    <script src="static/js/angular.js"></script>
+    <script src="static/js/angular-ui-router.js"></script>
+    <!-- Custom JS -->
+    <script src="static/js/directives.js"></script>
+</head>
+
+<body ng-app="directives">
+    <div class="container">
+        <hello></hello>
+        <hello2 subject="jesslyn"></hello2>
+        <hello3 subject="jesslyn"></hello3>
+        <hello3></hello3>
+        <bt-button></bt-button>
+        <bt-button type="primary"></bt-button>
+        <h1>Original Form</h1>
+        <form>
+            <div class="form-group">
+                <label>First name</label>
+                <input type="text" class="form-control" placeholder="First name">
+            </div>
+            <div class="form-group">
+                <label>Last name</label>
+                <input type="text" class="form-control" placeholder="Last name">
+            </div>
+            <div class="form-group">
+                <label>Email address</label>
+                <input type="text" class="form-control" placeholder="Email address">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <h1>Refactored Form</h1>
+        <form>
+            <form-group field="First name"></form-group>
+            <form-group field="Last name"></form-group>
+            <form-group field="Email address"></form-group>
+            <form-group field="Password"></form-group>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <br>
+        <h1>Toggle button: ON is green, OFF is gray</h1>
+        <toggle-button on="Turn off" off="Turn on"></toggle-button>
+    </div>
+</body>
+
+<script src="static/js/jquery.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+
+</html>
